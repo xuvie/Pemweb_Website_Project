@@ -34,7 +34,7 @@ require_once 'cek-akses.php';
           </li>
           <li class="nav-item">
                   <a class="nav-link active text-succes text-dark text-decoration-none fs-5 fw-bold" aria-current="dropdown"
-                     href="profil.php">Profile</a>
+                    href="profil.php">Profile</a>
           </li>
           <div class="btn-group">
             <button class="btn btn-sm fs-6 fw-bold" type="button">
@@ -74,8 +74,7 @@ require_once 'cek-akses.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
-    <a href="login.php"><input type="button" class="mybutton" value="Sign In"></a>
-    <a href="daftar.php"><input type="button" class="mybutton" value="Sign Up"></a>
+    <a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default"><input type="button" class="mybutton" value="DOWNLOAD NOW!"></a>
     <audio autoplay>
       <source src="music.mp3" type="audio/mpeg">
     </audio>
@@ -284,23 +283,23 @@ require_once 'cek-akses.php';
   <table>
 
     <?php
- include "koneksi2.php";
- $no=1;
+  include "koneksi2.php";
+  $no=1;
  $ambildata = mysqli_query($koneksi,"select * from komentar 
- INNER JOIN users ON komentar.id_user = users.id");
- while ($tampil = mysqli_fetch_array($ambildata)){
-   echo "
-   <tr>
-   <td>$no</td>
-   <td><b>$tampil[nama]</b></td>
-   <td>$tampil[komentar]</td>
-   <td>$tampil[tanggal]</td>
-   </tr>";
-   $no++;
+  INNER JOIN users ON komentar.id_user = users.id");
+  while ($tampil = mysqli_fetch_array($ambildata)){
+    echo "
+    <tr>
+    <td>$no</td>
+    <td><b>$tampil[nama]</b></td>
+    <td>$tampil[komentar]</td>
+    <td>$tampil[tanggal]</td>
+    </tr>";
+    $no++;
   }
   ?>
   </table>
-  <br><br>        
+  <br><br>
   <!--footer-->
   <footer class="p-2 fw-bold" style="background-color: #000;">
     <div class="countainer">

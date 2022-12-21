@@ -62,19 +62,18 @@ if (!empty($_POST)) {
         <title>Profil User</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body>
+    <body class="bg-gradient-to-r from-purple-500 to-pink-500 ">
         <?php
-         $__menuAktif = 'profil';
-         include 'menu.php';
-         ?>
-         <div class="container">
-            <div class="row mb-3 align-items-center">
-                <div class="col-auto">
-                 <img src="//www.gravatar.com/avatar/<?php echo md5($user['email']);?>?s=48&d=monsterid" class="rounded-circle"/>
-                </div>
-                <div class="col">
+            $__menuAktif = 'profil';
+            include 'menu.php';
+        ?>
+        <div class="container mx-auto border w-[500px] h-[640px] p-10 bg-white rounded-[20px]">
+            <div class="mx-auto">
+                <img src="//www.gravatar.com/avatar/<?php echo md5($user['email']);?>?s=48&d=monsterid" class="rounded-xl mx-auto w-[70px]"/>
+                <div class="text-center">
                     <h2 class="mb-0"><?php echo htmlentities($user['nama']);?></h2>
                 </div>
             </div>
@@ -86,12 +85,12 @@ if (!empty($_POST)) {
                     }
                     ?>
                     <form method="POST" action="">
-                        <div class="mb-3">
+                        <div class="my-2 flex flex-col">
                             <label class="form-label">Nama</label>
                             <input type="text" class="form-control" name="nama"
                                 value="<?php echo isset($_POST['nama']) ? $_POST['nama'] : $user['nama'];?>" required>
                         </div>
-                        <div class="mb-3">
+                        <div class="my-2 flex flex-col">
                             <label class="form-label">Email</label>
                             <input type="email" class="form-control" name="email"
                                 value="<?php echo isset($_POST['email']) ? $_POST['email'] : $user['email'];?>" required>
@@ -99,24 +98,24 @@ if (!empty($_POST)) {
                         <hr/>
                         <h5>Ganti Password</h5>
                         <p class="text-info">Kosongkan jika tidak diganti</p>
-                        <div class="mb-3">
+                        <div class="my-2 flex flex-col">
                             <label class="form-label">Password Lama</label>
-                            <input type="password" name="password_lama" class="form-control">
+                            <input type="password" name="password_lama" class="form-control rounded-lg">
                         </div>
-                        <div class="mb-3">
+                        <div class="my-2 flex flex-col">
                             <label class="form-label">Password Baru</label>
-                            <input type="password" name="password_baru" class="form-control">
+                            <input type="password" name="password_baru" class="form-control rounded-lg">
                         </div>
-                        <div class="mb-3">
+                        <div class="my-2 flex flex-col">
                             <label class="form-label">Ketik Ulang Password Baru</label>
-                            <input type="password" name="password_baru2" class="form-control">
+                            <input type="password" name="password_baru2" class="form-control rounded-lg">
                         </div>
                         <div class="text-end mb-5">
-                            <button class="btn btn-primary">Simpan</button>
+                            <button class="my-3 px-5 py-2 rounded-lg text-white bg-slate-700">Simpan</button>
                         </div>
                     </form>
                 </div>
             </div>
-         </div>
+        </div>
     </body>
 </html>
