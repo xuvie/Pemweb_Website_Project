@@ -271,7 +271,7 @@ require_once 'cek-akses.php';
             <div class="col">
             <form method="POST" action="komentar.php">
             <div class="mb-3 row">
-              <div class="mb-3">
+              <div class="mb-3" style="padding-left: 100px; padding-right: 100px;">
                 <textarea class="form-control" name="komentar" placeholder="Komentar"></textarea>
                 <input type="hidden" value="<?php echo $komentar['id'];?>" name="id_user"/>
               </div>
@@ -280,7 +280,7 @@ require_once 'cek-akses.php';
               </div>
             
   <!-- comment-->
-  <table>
+  <table class="m-5 px-5">
 
     <?php
   include "koneksi2.php";
@@ -296,7 +296,7 @@ require_once 'cek-akses.php';
     <td>$tampil[tanggal]</td>
 
     <td align='center'><a href ='?hapus=$tampil[id_user]' onClick=\"return confirm('Anda yakin menghapus data ini?');\">
-        <input type='button' value='Hapus'>
+        <input type='button' value='Hapus' style='border-radius: 20%; border: none;'>
       </a>
     </td>
     </tr>";
