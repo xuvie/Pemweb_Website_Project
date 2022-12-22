@@ -294,6 +294,7 @@ require_once 'cek-akses.php';
     <td><b>$tampil[nama]</b></td>
     <td>$tampil[komentar]</td>
     <td>$tampil[tanggal]</td>
+
     <td align='center'><a href ='?hapus=$tampil[id_user]' onClick=\"return confirm('Anda yakin menghapus data ini?');\">
         <input type='button' value='Hapus'>
       </a>
