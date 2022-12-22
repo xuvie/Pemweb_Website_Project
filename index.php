@@ -289,7 +289,12 @@ require_once 'cek-akses.php';
       </div>
       <div class="wrapper">
         <form action="" method="post" class="form">
+<<<<<<< Updated upstream
           <br>
+=======
+          <input type="text" cols="30" class="name" name="name" placeholder="Name">
+          <br><br>
+>>>>>>> Stashed changes
           <textarea name="message" cols="120" rows="5" class="message" placeholder="Message"></textarea>
           <br>
           <button type="submit" class="btn text-white" name="post_comment" >Post Comment</button>
@@ -316,6 +321,10 @@ require_once 'cek-akses.php';
     </div>
     </div>
   </section>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   <table>
 
     <?php
