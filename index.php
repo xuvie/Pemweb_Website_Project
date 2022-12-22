@@ -316,7 +316,6 @@ require_once 'cek-akses.php';
     </div>
     </div>
   </section>
-
   <table>
 
     <?php
