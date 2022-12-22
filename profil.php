@@ -47,11 +47,11 @@ if (!empty($_POST)) {
                         'password' => sha1($_POST['password_baru']),
                         'id' => $_SESSION['user']['id']
                     ));
-                    header("Location: profil.php");
+                    header("Location: index.php");
                 }
             }
         } else {
-            header("Location: profil.php");
+            header("Location: index.php");
         }
     }
 }
@@ -111,6 +111,7 @@ if (!empty($_POST)) {
                             <input type="password" name="password_baru2" class="form-control rounded-lg">
                         </div>
                         <div class="text-end mb-5">
+                            <a href="logout.php" class="my-3 px-5 py-2 rounded-lg text-white bg-slate-700">Log Out</a>
                             <button class="my-3 px-5 py-2 rounded-lg text-white bg-slate-700">Simpan</button>
                         </div>
                     </form>

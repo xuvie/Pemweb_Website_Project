@@ -280,7 +280,7 @@ require_once 'cek-akses.php';
               </div>
             
   <!-- comment-->
-  <table class="m-5 px-5">
+  <table class="table m-5 px-5">
 
     <?php
   include "koneksi2.php";
@@ -288,18 +288,21 @@ require_once 'cek-akses.php';
  $ambildata = mysqli_query($koneksi,"select * from komentar 
   INNER JOIN users ON komentar.id_user = users.id");
   while ($tampil = mysqli_fetch_array($ambildata)){
-    echo "
-    <tr>
-    <td>$no</td>
-    <td><b>$tampil[nama]</b></td>
-    <td>$tampil[komentar]</td>
-    <td>$tampil[tanggal]</td>
+    echo " 
+    <div>
+      <tr>
+        <td>$no</td>
+        <td><b>$tampil[nama]</b></td>
+        <td>$tampil[komentar]</td>
+        <td>$tampil[tanggal]</td>
 
-    <td align='center'><a href ='?hapus=$tampil[id_user]' onClick=\"return confirm('Anda yakin menghapus data ini?');\">
-        <input type='button' value='Hapus' style='border-radius: 20%; border: none;'>
-      </a>
-    </td>
-    </tr>";
+        <td align='center'><a href ='?hapus=$tampil[id_user]' onClick=\"return confirm('Anda yakin menghapus data ini?');\">
+            <input type='button' value='Hapus' style='border-radius: 20%; border: none;'>
+          </a>
+        </td>
+      </tr>
+    </div>
+    ";
     $no++;
   }
   ?>
