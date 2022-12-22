@@ -294,11 +294,27 @@ require_once 'cek-akses.php';
     <td><b>$tampil[nama]</b></td>
     <td>$tampil[komentar]</td>
     <td>$tampil[tanggal]</td>
+
+    <td align='center'><a href ='?hapus=$tampil[id_user]' onClick=\"return confirm('Anda yakin menghapus data ini?');\">
+        <input type='button' value='Hapus'>
+      </a>
+    </td>
     </tr>";
     $no++;
   }
   ?>
   </table>
+  <?php
+  
+  if(isset($_GET['hapus'])){
+
+  mysqli_query($koneksi,"DELETE FROM komentar WHERE id_user='$_GET[hapus]'") or die (mysqli_error($koneksi));
+
+  echo "<p><b> Data berhasil dihapus</b> </p>";
+  echo "<meta http-equiv=refresh content=2;URL='index.php'>";
+
+  }
+?>
   <br><br>
   <!--footer-->
   <footer class="p-2 fw-bold" style="background-color: #000;">
