@@ -280,6 +280,51 @@ require_once 'cek-akses.php';
               </div>
             
   <!-- comment-->
+  <section id="comment">
+    <div class="container mt-0">
+      <div class="row text-center">
+        <div class="col">
+          <span class="countainer-fluid  p-0 text-dark fs-1 fw-bold text-white"><br>Leave us a comment! <br><br></span>
+        </div>
+      </div>
+      <div class="wrapper">
+        <form action="" method="post" class="form">
+<<<<<<< Updated upstream
+          <br>
+=======
+          <input type="text" cols="30" class="name" name="name" placeholder="Name">
+          <br><br>
+>>>>>>> Stashed changes
+          <textarea name="message" cols="120" rows="5" class="message" placeholder="Message"></textarea>
+          <br>
+          <button type="submit" class="btn text-white" name="post_comment" >Post Comment</button>
+        </form>
+      </div>
+
+
+      <div class="card p-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="user d-flex flex-row align-items-center">
+            <span><small class="font-weight-bold text-primary">james_olesenn <br></small> <small
+                class="font-weight-bold">Hmm, This poster looks cool</small></span>
+          </div>
+          <small>2 days ago</small>
+        </div>
+        <div class="action d-flex justify-content-between mt-2 align-items-center">
+          <div class="reply px-4">
+            <small><button>Remove</button></small>
+            <span class="dots"></span>
+            <small><button>Edit</button></small>
+            <span class="dots"></span>
+          </div>
+    </div>
+    </div>
+    </div>
+  </section>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   <table>
 
     <?php
